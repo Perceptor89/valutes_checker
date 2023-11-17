@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currencies</title>
+    <link href="http://testserver/static/css/bootstrap.css" rel="stylesheet">
+    <script src="static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container position-absolute top-50 start-50 translate-middle col-4">
+        <div class="row text-center">
+            <h1>ACTUAL PRICES</h1>
+            <div class="row">
+                <div class="col-5 fs-5 text-end">on</div>
+                <div class="col-6 fs-5 text-start">2023-10-08</div>
+            </div>
+        </div>
+        <hr class="text-primary">
+        <div class="row">
+            
+                <div class="col text-center fs-4">
+                    <b>EUR</b>
+                </div>
+            
+                <div class="col text-center fs-4">
+                    <b>USD</b>
+                </div>
+            
+        </div>
+        <div class="row">
+            
+                <div class="col text-center fs-5">
+                    58.0003
+                </div>
+            
+                <div class="col text-center fs-5">
+                    52.1023
+                </div>
+            
+        </div>
+        <div class="row">
+            <div class="d-grid gap-2 d-md-flex justify-content-center mt-4">
+                
+                    <a class="col-3 btn btn-outline-secondary" href="/?days_back=today" role="button">today</a>
+                
+                    <a class="col-3 btn btn-outline-secondary" href="/?days_back=yesterday" role="button">yesterday</a>
+                
+                    <a class="col-3 btn btn-outline-secondary" href="/?days_back=2 days ago" role="button">2 days ago</a>
+                
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

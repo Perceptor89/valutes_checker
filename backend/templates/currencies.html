@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currencies</title>
+    <link href="{{ url_for('static', path='/css/bootstrap.css') }}" rel="stylesheet">
+    <script src="static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container position-absolute top-50 start-50 translate-middle col-4">
+        <div class="row text-center">
+            <h1>ACTUAL PRICES</h1>
+            <div class="row">
+                <div class="col-5 fs-5 text-end">on</div>
+                <div class="col-6 fs-5 text-start">{{ date }}</div>
+            </div>
+        </div>
+        <hr class="text-primary">
+        <div class="row">
+            {% for valute in values %}
+                <div class="col text-center fs-4">
+                    <b>{{ valute[0] }}</b>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            {% for valute in values %}
+                <div class="col text-center fs-5">
+                    {{ valute[1] }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="d-grid gap-2 d-md-flex justify-content-center mt-4">
+                {% for button in buttons %}
+                    <a class="col-3 btn btn-outline-secondary" href="/?days_back={{ button }}" role="button">{{ button }}</a>
+                {% endfor %}
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
